@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <div class="gallery">
+        <div class="image">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="image">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="image">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <!-- Add more images here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+2. **CSS (styles.css)**:
+css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image {
+    margin: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+3. **JavaScript (script.js)**:
+javascript
+// JavaScript can be used for interactivity, like opening images in a lightbox or slideshow.
+// Here's a simple example for opening images in a new tab/window when clicked.
+
+const images = document.querySelectorAll('.image img');
+
+images.forEach((image) => {
+    image.addEventListener('click', () => {
+        window.open(image.src, '_blank');
+    });
+});
+
+
+This is a basic structure to get you started. You can add more images to your gallery by duplicating the HTML `<div class="image">...</div>` block and updating the `src` attribute with the image file path.
+
+For more advanced features like lightboxes, slideshows, or filtering, you may want to explore JavaScript libraries and frameworks like Lightbox.js, Slick Slider, or Isotope.js, which can simplify the process and provide additional functionality.body{    
+    background: blueviolet;
+    font-family: montserrat;
+}
+section {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+.section-header{
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 900;
+    padding-bottom: 25px;
+    color: #fff;
+}
+.section-header:after{
+    content: '';
+    height: 3px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 100px);
+    background: #fff;
+}
+.section-header span {
+	display: block;
+	font-size: 15px;
+	font-weight: 300;
+}
+.testimonials{
+    max-width: 1000px;
+    padding: 0 15px 50px;
+    margin: 0 auto 80px auto;
+}
+.single-item{
+    background: #fff;
+    color: #111;
+    padding: 15px;
+    margin: 50px 15px;
+}
+.profile{
+    margin-bottom: 30px;
+    text-align: center;    
+}
+.img-area {
+	margin: 0 15px 15px 15px;
+}
+.img-area img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	border: 7px solid blueviolet;
+}
+.content{
+    font-size: 18px;
+}
+.content p {
+	text-align: justify;
+}
+.content p span {
+	font-size: 48px;
+	margin-right: 20px;
+    color: blueviolet;
+}
+.socials i {
+	margin-right: 25px;
+}
+.bio h4 {
+	font-family: 'Berkshire Swash', cursive;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	background-color: blueviolet;
+}
